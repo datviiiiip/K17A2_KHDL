@@ -105,5 +105,49 @@ a=(x**x + x + 1)**n + (x**x - x + 1)**n
 print('nhap n:',n)
 print('nhap x:',x)
 print('A=',a)
-
+#8.12
+n=int(input('so nguyen to'))
+flag = True
+if n<2:
+    print('khong phai so nguyen to')
+else:
+    for i in range(2,n):
+        if n%i == 0:
+            flag = False
+            break
+        if flag:
+            print(n,'la so nguyen to')
+#8.14
+a=int(input('nhap so nguyen N:'))
+b=0
+for i in range(1, a+1):
+    print('nhap so hang thu:', i)
+    b1=int(input())
+    b = b+b1
+print('tong',a,'tong hang', b)
+#8.15
+a = True
+s = 0
+while a:
+    print('so nguyen:')
+    b=int(input())
+    s=s+b
+    if b==0:
+        a=False
+        break
+    print('s=',s)
+#8.19
+n=int(input('nhap vao:'))
+for i in range(n,0,-1):
+    if i%2 !=0:
+        print(i, end=" ")
+#8.16
+a=int(input('so nguyen a'))
+b=int(input('so nguyen b'))
+while a*b!=0:
+    if a>b:
+        a%=b
+    else:
+        b%=a
+print(a+b)
     
